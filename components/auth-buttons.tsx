@@ -2,27 +2,12 @@
 
 import { auth } from "@/lib/firebase";
 import React from "react";
-import {
-  signOut,
-  signInWithPopup,
-  GoogleAuthProvider,
-  User,
-  onAuthStateChanged,
-} from "firebase/auth";
+import { User, onAuthStateChanged } from "firebase/auth";
+import SignOutButton from "./sign-out-button";
+import SignInButton from "./sign-in-button";
+import SignUpButton from "./sign-up-button";
 
-const provider = new GoogleAuthProvider();
-
-const SignInButton = () => (
-  <button onClick={() => signInWithPopup(auth, provider)}>
-    Se connecter avec Google
-  </button>
-);
-
-const SignOutButton = () => (
-  <button onClick={() => signOut(auth)}>Se déconnecter</button>
-);
-
-export const AuthButtons = () => {
+const AuthButtons = () => {
   const [user, setUser] = React.useState<User | null>(null);
 
   React.useEffect(() => {
@@ -33,9 +18,18 @@ export const AuthButtons = () => {
   }, []);
 
   if (user) {
-    return <SignOutButton />;
+    return (
+      <div>
+        <SignOutButton />
+      </div>
+    );
   } else {
-    return <SignInButton />;
+    return (
+      <div>
+        <SignInButton />
+        <SignUpButton />
+      </div>
+    );
   }
 };
 
