@@ -4,8 +4,9 @@ import { auth } from "@/lib/firebase";
 import React from "react";
 import { User, onAuthStateChanged } from "firebase/auth";
 import SignOutButton from "./sign-out-button";
-import SignInButton from "./sign-in-button";
 import SignUpButton from "./sign-up-button";
+import EmailSignInButton from "./email-sign-in-button";
+import GoogleSignInButton from "./google-sign-in-button";
 
 const AuthButtons = () => {
   const [user, setUser] = React.useState<User | null>(null);
@@ -26,8 +27,9 @@ const AuthButtons = () => {
   } else {
     return (
       <div>
-        <SignInButton />
+        <EmailSignInButton />
         <SignUpButton />
+        <GoogleSignInButton />
       </div>
     );
   }
