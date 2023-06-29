@@ -7,6 +7,7 @@ import SignOutButton from "./sign-out-button";
 import SignUpButton from "./sign-up-button";
 import EmailSignInButton from "./email-sign-in-button";
 import GoogleSignInButton from "./google-sign-in-button";
+import FacebookSignInButton from "./facebook-sign-in-button";
 
 const AuthButtons = () => {
   const [user, setUser] = React.useState<User | null>(null);
@@ -30,6 +31,7 @@ const AuthButtons = () => {
         <EmailSignInButton />
         <SignUpButton />
         <GoogleSignInButton />
+        <FacebookSignInButton />
       </div>
     );
   }
