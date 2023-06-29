@@ -2,6 +2,8 @@
 
 This project is built using the Next.js framework and integrates with the Firebase database.
 
+The authentication page offers multiple authentication options (email, Google, Facebook, phone number and ..)
+
 To run the development server, use the following command:
 
 ```bash
