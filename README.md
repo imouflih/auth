@@ -6,9 +6,17 @@ To run the development server, use the following command:
 
 ```bash
 npm run dev
-# or
+```
+
+or
+
+```bash
 yarn dev
-# or
+```
+
+or
+
+```bash
 pnpm dev
 ```
 
