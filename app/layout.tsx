@@ -1,8 +1,9 @@
+import { siteConfig } from "@/config/site";
 import "./globals.css";
 
 export const metadata = {
-  title: "Auth",
-  description: "Authentification with Firebase",
+  title: siteConfig.title,
+  description: siteConfig.description,
 };
 
 export default function RootLayout({
