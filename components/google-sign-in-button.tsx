@@ -16,7 +16,14 @@ const GoogleSignInButton = () => {
   };
 
   return (
-    <button onClick={handleSignInWithGoogle}>Se connecter avec Google</button>
+    <div className="p-2">
+      <button
+        onClick={handleSignInWithGoogle}
+        className="px-4 py-2 font-bold text-white bg-yellow-500 rounded hover:bg-yellow-700"
+      >
+        Se connecter avec Google
+      </button>
+    </div>
   );
 };
 

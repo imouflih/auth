@@ -25,20 +25,27 @@ const SignUpButton = () => {
   };
 
   return (
-    <div>
+    <div className="flex p-2 space-x-1">
       <input
         type="email"
         value={email}
         onChange={handleEmailChange}
         placeholder="Email"
+        className="block p-1.5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50"
       />
       <input
         type="password"
         value={password}
         onChange={handlePasswordChange}
         placeholder="Mot de passe"
+        className="block p-1.5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50"
       />
-      <button onClick={handleSignUp}>S inscrire</button>
+      <button
+        onClick={handleSignUp}
+        className="px-4 py-2 font-bold text-white rounded-lg bg-emerald-500 hover:bg-emerald-700"
+      >
+        S inscrire
+      </button>
     </div>
   );
 };

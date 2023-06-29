@@ -15,9 +15,14 @@ const FacebookSignInButton = () => {
   };
 
   return (
-    <button onClick={handleSignInWithFacebook}>
-      Se connecter avec Facebook
-    </button>
+    <div className="p-2">
+      <button
+        onClick={handleSignInWithFacebook}
+        className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
+      >
+        Se connecter avec Facebook
+      </button>
+    </div>
   );
 };
 
